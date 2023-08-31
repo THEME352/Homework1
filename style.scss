@@ -60,6 +60,9 @@ body{
   }
 }
 .content{
+  &__top-season{
+  background: #000915;
+  }
   &__top{
   background: #000915;
   padding-top: 128px;
@@ -99,6 +102,46 @@ body{
     &_img:hover{
       border: 3px solid #44D2FF;
     }
+  }
+  &__season{
+    padding-top: 410px;
+    padding-left: 120px;
+    max-width: 584px;
+    &_top{
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &_text{
+      padding-top: 32px;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 32px;
+    }
+    &_button{
+      margin-top: 32px;
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-radius: 30px;
+      background: #9C0332;
+      width: 234.063px;
+      height: 48.603px;
+      border: none;
+    }
+    &_button:hover{
+      background: #EB443F;
+    }
+  }
+  &__videogame{
   }
 }
 

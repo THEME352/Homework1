@@ -60,6 +60,9 @@ body {
   background: #EB443F;
 }
 
+.content__top-season {
+  background: #000915;
+}
 .content__top {
   background: #000915;
   padding-top: 128px;
@@ -100,7 +103,44 @@ body {
 .content__box_img:hover {
   border: 3px solid #44D2FF;
 }
-
+.content__season {
+  padding-top: 410px;
+  padding-left: 120px;
+  max-width: 584px;
+}
+.content__season_top {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.content__season_text {
+  padding-top: 32px;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.content__season_button {
+  margin-top: 32px;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 30px;
+  background: #9C0332;
+  width: 234.063px;
+  height: 48.603px;
+  border: none;
+}
+.content__season_button:hover {
+  background: #EB443F;
+}
 @media (max-width: 767px) {
   .header__top {
     padding-left: 16px;
@@ -132,5 +172,19 @@ body {
   .content__box_img {
     background-position: center;
     background-size: cover;
+  }
+  .content__season {
+    text-align: center;
+    padding-top: 178px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 343px;
+  }
+  .content__season_top {
+    font-size: 32px;
+  }
+  .content__season_text {
+    font-size: 14px;
+    line-height: 22px;
   }
 }/*# sourceMappingURL=style.css.map */

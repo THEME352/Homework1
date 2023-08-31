@@ -33,5 +33,19 @@
             background-size: cover
         }
     }
+    &__season{
+        text-align: center;
+        padding-top: 178px;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 343px;
+    }
+    &__season_top{
+        font-size: 32px;
+    }
+    &__season_text{
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 }
