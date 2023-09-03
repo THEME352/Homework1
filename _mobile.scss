@@ -3,6 +3,7 @@
     &__top{
         padding-left: 16px;
         padding-right: 16px;
+        padding-bottom: 366px;
     &_text{
         font-size: 14px;
         line-height: 22px;
@@ -34,11 +35,10 @@
         }
     }
     &__season{
-        text-align: center;
         padding-top: 178px;
         padding-left: 16px;
         padding-right: 16px;
-        max-width: 343px;
+        text-align: center;
     }
     &__season_top{
         font-size: 32px;
@@ -46,6 +46,9 @@
     &__season_text{
         font-size: 14px;
         line-height: 22px;
+    }
+    &__season_button{
+        align-self: center;
     }
 }
 }

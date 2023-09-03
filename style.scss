@@ -100,13 +100,19 @@ body{
       border-radius: 18px;
     }
     &_img:hover{
-      border: 3px solid #44D2FF;
+      outline: 3px solid #44D2FF;
     }
   }
   &__season{
-    padding-top: 410px;
-    padding-left: 120px;
-    max-width: 584px;
+      padding-left: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 410px;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-width: 584px;
+      padding-bottom: 282px;
     &_top{
       color: #FFF;
       font-family: Montserrat;
@@ -140,8 +146,6 @@ body{
     &_button:hover{
       background: #EB443F;
     }
-  }
-  &__videogame{
   }
 }
 
