@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.center{
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.header{
+    &__index{
+      background-size: cover;
+      background-image: url(image/background1.jpg);
+      height: 1440px;
+      background-repeat: no-repeat;
+    }
+    &__top{
+      padding-left: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 217px;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-width: 788px;
+      &_title{
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      &_text{
+        padding-top: 32px;
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+      }
+      &_button{
+        margin-top: 44px;
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 30px;
+        background: #9C0332;
+        width: 234.063px;
+        height: 48.603px;
+        border: none;
+      }
+      &_button:hover{
+        background: #EB443F;
+      }
+  }
+}
+.content{
+  &__top-season{
+  background: #000915;
+  }
+  &__top{
+  background: #000915;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  }
+  &__box{
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(12, 1fr);
+    &_game{
+      height: 260px;
+      grid-column: span 4;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: flex-start;
+      align-items: self-end;
+      color: #FFF;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      padding-left: 32px;
+      padding-bottom: 32px;
+    }
+    &_img1{
+      background-image: url(image/game1.jpg);
+      border-radius: 18px;
+    }
+    &_img2{
+      background-image: url(image/game2.jpg);
+      border-radius: 18px;
+    }
+    &_img3{
+      background-image: url(image/game3.jpg);
+      border-radius: 18px;
+    }
+    &_img:hover{
+      outline: 3px solid #44D2FF;
+    }
+  }
+  &__season{
+      padding-left: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 410px;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-width: 584px;
+      padding-bottom: 282px;
+    &_top{
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &_text{
+      padding-top: 32px;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 32px;
+    }
+    &_button{
+      margin-top: 32px;
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-radius: 30px;
+      background: #9C0332;
+      width: 234.063px;
+      height: 48.603px;
+      border: none;
+    }
+    &_button:hover{
+      background: #EB443F;
+    }
+  }
+}
+
+@import 'mobile';
