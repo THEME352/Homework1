@@ -1,3 +1,8 @@
+//Задание 1
+const str = 'js';
+const upperCaseStr = str.toUpperCase();
+
+console.log(upperCaseStr);
 //Задание 2
 function filterArrayByPrefix(arr, prefix) {
     return arr.filter((item) => item.toLowerCase().startsWith(prefix.toLowerCase()));
@@ -69,3 +74,17 @@ function formatDateTime(date) {
   }
   const currentDate = new Date();
   console.log('Дата:', formatDateTime(currentDate));
+  
+//Задание 11
+const fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+const shuffledFruits = shuffleArray(fruits);
+for (let i = 0; i < shuffledFruits.length; i++) {
+  alert(shuffledFruits[i]);
+}
