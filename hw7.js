@@ -32,14 +32,16 @@ function generateRandomNumber() {
   }
 
 //Задание 6
-function generateRandomArray(n) {
-    const arr = [];
-    for (let i = 0; i < n / 2; i++) {
-      const randomNumber = Math.floor(Math.random() * (n + 1));
-      arr.push(randomNumber);
-    }
-    return arr;
+function getRandomArrNumbers(num) {
+  var len = Math.floor(num / 2);
+  var arr = [];
+  for (var i = 0; i < len; i++) {
+    arr.push(Math.floor(Math.random() * (num + 1)));
   }
+  return arr;
+}
+console.log(getRandomArrNumbers(7)); // [6, 2, 7]
+console.log(getRandomArrNumbers(12)); // [9, 11, 10, 9, 3, 0]
 
 //Задание 7
 function getRandomNumber(min, max) {
@@ -57,34 +59,47 @@ console.log(futureDate);
 
 //Задание 10
 function formatDateTime(date) {
-    const weekdays = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-    
-    const options = {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    };
-    const formattedDate = `${date.toLocaleDateString('ru-RU', options)} - это ${weekdays[date.getDay()]}.`;
-    return formattedDate;
-  }
-  const currentDate = new Date();
-  console.log('Дата:', formatDateTime(currentDate));
+  var options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  var formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(date);
+
+  return formattedDate;
+}
+
+var now = new Date();
+console.log(formatDateTime(now));
   
 //Задание 11
-const fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+var fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+var shuffledFruits = shuffleArray(fruits);
+alert('Перемешанный массив: ' + shuffledFruits.join(', '));
+var firstElementGuess = prompt('Чему равнялся первый элемент массива?');
+var lastElementGuess = prompt('Чему равнялся последний элемент массива?');
+if (firstElementGuess === fruits[0] && lastElementGuess === fruits[fruits.length - 1]) {
+  alert('Поздравляем, вы угадали оба элемента!');
+} else if (firstElementGuess === fruits[0] || lastElementGuess === fruits[fruits.length - 1]) {
+  alert('Вы были близки к победе!');
+} else {
+  alert('Вы ответили неверно.');
+}
 function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+  var currentIndex = array.length;
+  var temporaryValue, randomIndex;
+
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
   return array;
-}
-const shuffledFruits = shuffleArray(fruits);
-for (let i = 0; i < shuffledFruits.length; i++) {
-  alert(shuffledFruits[i]);
 }
