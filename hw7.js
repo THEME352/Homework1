@@ -77,29 +77,24 @@ var now = new Date();
 console.log(formatDateTime(now));
   
 //Задание 11
-var fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-var shuffledFruits = shuffleArray(fruits);
-alert('Перемешанный массив: ' + shuffledFruits.join(', '));
-var firstElementGuess = prompt('Чему равнялся первый элемент массива?');
-var lastElementGuess = prompt('Чему равнялся последний элемент массива?');
-if (firstElementGuess === fruits[0] && lastElementGuess === fruits[fruits.length - 1]) {
-  alert('Поздравляем, вы угадали оба элемента!');
-} else if (firstElementGuess === fruits[0] || lastElementGuess === fruits[fruits.length - 1]) {
-  alert('Вы были близки к победе!');
-} else {
-  alert('Вы ответили неверно.');
-}
-function shuffleArray(array) {
-  var currentIndex = array.length;
-  var temporaryValue, randomIndex;
-
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+function playGame() {
+  var words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+  words.sort(function() {
+    return 0.5 - Math.random();
+  });
+  alert(words.join(', '));
+  var firstWord = prompt("Чему равнялся первый элемент массива?");
+  var lastWord = prompt("Чему равнялся последний элемент массива?");
+  firstWord = firstWord.toLowerCase();
+  lastWord = lastWord.toLowerCase();
+  var shuffledFirstWord = words[0].toLowerCase();
+  var shuffledLastWord = words[words.length - 1].toLowerCase();
+  if (firstWord === shuffledFirstWord && lastWord === shuffledLastWord) {
+    alert("Поздравляю, вы угадали оба элемента!");
+  } else if (firstWord === shuffledFirstWord || lastWord === shuffledLastWord) {
+    alert("Вы были близки к победе!");
+  } else {
+    alert("Вы ответили неверно!");
   }
-  return array;
 }
+document.getElementById("playButton").addEventListener("click", playGame);
